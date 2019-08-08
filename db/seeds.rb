@@ -10,8 +10,18 @@ puts 'Clearing DB...'
 Cocktail.destroy_all
 
 puts 'Creating ingredients...'
-Ingredient.create(name: "lemon")
-Ingredient.create(name: "ice")
-Ingredient.create(name: "mint leaves")
+Ingredient.create!(name: 'lemon')
+Ingredient.create!(name: 'ice')
+Ingredient.create!(name: 'mint leaves')
+Ingredient.create!(name: 'rhum')
+
+puts 'Creating a cocktail...'
+Cocktail.create!(name: 'Mojito')
+
+puts 'Creating doses...'
+Dose.create!(description: 'Half a lemon', ingredient_id: '1', cocktail_id: '1')
+Dose.create!(description: 'Half a glass', ingredient_id: '2', cocktail_id: '1')
+Dose.create!(description: '4', ingredient_id: '3', cocktail_id: '1')
+Dose.create!(description: '4cl', ingredient_id: '4', cocktail_id: '1')
 
 puts 'Done.'
