@@ -1,15 +1,21 @@
 // Specific CSS for your home-page
 #banner {
   background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),
-  url("https://cdn.shopify.com/s/files/1/1026/4003/articles/colored-fancy-cocktail_1600x.jpg?v=1475292052");
-  height: 60vh;
+  url("https://www.hotel-origami.com/media/cache/jadro_resize/rc/s819szpR1551401495/jadroRoot/medias/gin-cocktails.jpg");
+  height: 70vh;
   width: 100%;
   background-position: center;
+  background-size: cover;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   h1 {
     font-weight: bolder;
-    color: white;
     font-size: 64px;
-    text-align: center;
-    padding-top: 160px;
+  }
+  p {
+    font-size: 24px;
   }
 }

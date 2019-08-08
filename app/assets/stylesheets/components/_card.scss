@@ -1,0 +1,29 @@
+.card-category {
+  background-size: cover;
+  background-position: center;
+  height: 240px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #F0F0F0;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  margin: 16px;
+  background-image: linear-gradient(135deg, rgba(0,0,0,0.4),rgba(0,0,0,0.8)),
+  url("  https://www.festillant.com/wp-content/uploads/2019/05/loeil-du-cyclone-184619351.jpeg");
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  box-shadow: 0 0 12px rgba(0,0,0,0.7);
+  a {
+    color: white;
+    font-size: 32px;
+  }
+  a:hover {
+    color: #8B8F74;
+    text-decoration: none;
+  }
+}
