@@ -8,6 +8,8 @@
 
 puts 'Clearing DB...'
 Cocktail.destroy_all
+Ingredient.destroy_all
+Dose.destroy_all
 
 puts 'Creating ingredients...'
 Ingredient.create!(name: 'rhum')
