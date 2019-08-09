@@ -1,24 +1,34 @@
 <div class="container">
-  <div class="jumbotron">
-    <h1><%= @cocktail.name %></h1>
-    <hr>
-    <%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill %>
-
-    <ul class="list-unstyled">
-      <% @cocktail.doses.each do |dose| %>
-        <li>
-          <strong><%= Ingredient.find(dose.ingredient_id).name %>:</strong>
-          <%= dose.description %>
-          <%= link_to dose_path(dose), method: :delete do %>
-            <i class="fas fa-trash"></i>
+  <div class="card-cocktail">
+    <%= cl_image_tag @cocktail.photo %>
+    <div class="card-cocktail-infos">
+      <div>
+        <h1><%= @cocktail.name %></h1>
+        <ul class="list-unstyled">
+          <% @cocktail.doses.each do |dose| %>
+            <li>
+              <strong><%= Ingredient.find(dose.ingredient_id).name %>:</strong>
+              <%= dose.description %>
+              <%= link_to dose_path(dose), method: :delete do %>
+                <i class="fas fa-trash text-warning"></i>
+              <% end %>
+            </li>
           <% end %>
-        </li>
-      <% end %>
-    </ul>
-    <hr>
-
-    <%= link_to 'Add a dose', new_cocktail_dose_path(@cocktail), class:'btn btn-primary' %>
-    <br>
-    <%= link_to 'Back to cocktails', cocktails_path, class:'btn btn-primary my-2' %>
+        </ul>
+      </div>
+      <ul class="list-unstyled">
+        <li><% @cocktail.rating.times do %>
+          <i class="fas fa-star"></i>
+        <% end %>
+        <% (5 - @cocktail.rating).times do %>
+          <i class="far fa-star"></i>
+        <% end %></li>
+      </ul>
   </div>
 </div>
+
+  <div class="d-flex justify-content-between">
+    <%= link_to 'Add a dose', new_cocktail_dose_path(@cocktail), class:'btn btn-warning my-2' %>
+    <%= link_to 'Back to cocktails', cocktails_path, class:'btn btn-success my-2' %>
+  </div>
+

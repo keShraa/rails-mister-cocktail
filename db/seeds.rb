@@ -10,18 +10,24 @@ puts 'Clearing DB...'
 Cocktail.destroy_all
 
 puts 'Creating ingredients...'
+Ingredient.create!(name: 'rhum')
+Ingredient.create!(name: 'vodka')
+Ingredient.create!(name: 'tequila')
+Ingredient.create!(name: 'whisky')
+Ingredient.create!(name: 'martini')
+Ingredient.create!(name: 'tonic')
 Ingredient.create!(name: 'lemon')
+Ingredient.create!(name: 'orange')
 Ingredient.create!(name: 'ice')
 Ingredient.create!(name: 'mint leaves')
-Ingredient.create!(name: 'rhum')
 
-puts 'Creating a cocktail...'
-Cocktail.create!(name: 'Mojito')
+# puts 'Creating a cocktail...'
+# Cocktail.create!(name: 'Mojito', rating: 4)
 
-puts 'Creating doses...'
-Dose.create!(description: 'Half a lemon', ingredient_id: '1', cocktail_id: '1')
-Dose.create!(description: 'Half a glass', ingredient_id: '2', cocktail_id: '1')
-Dose.create!(description: '4', ingredient_id: '3', cocktail_id: '1')
-Dose.create!(description: '4cl', ingredient_id: '4', cocktail_id: '1')
+# puts 'Creating doses...'
+# Dose.create!(description: 'Half a lemon', ingredient_id: '1', cocktail_id: '1')
+# Dose.create!(description: 'Half a glass', ingredient_id: '2', cocktail_id: '1')
+# Dose.create!(description: '4', ingredient_id: '3', cocktail_id: '1')
+# Dose.create!(description: '4cl', ingredient_id: '4', cocktail_id: '1')
 
 puts 'Done.'

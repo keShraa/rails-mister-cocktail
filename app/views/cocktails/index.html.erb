@@ -10,10 +10,10 @@
         <div class="card-category">
           <h2><%= link_to cocktail.name, cocktail_path(cocktail) %></h2>
           <ul class="list-unstyled">
-            <li><% 3.times do %>
+            <li><% cocktail.rating.times do %>
               <i class="fas fa-star"></i>
             <% end %>
-            <% 2.times do %>
+            <% (5 - cocktail.rating).times do %>
               <i class="far fa-star"></i>
             <% end %></li>
             <br>
